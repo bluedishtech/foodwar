@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FoodWar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/cobe@0.6.3/dist/cobe.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+
+<style>
+    html {
+        font-size: 17px; /* Default font size */
+        scroll-behavior: smooth;
+    }
+    html.font-size-small {
+        font-size: 15px;
+    }
+    html.font-size-medium {
+        font-size: 17px;
+    }
+    html.font-size-large {
+        font-size: 19px;
+    }
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #121212; /* Material Dark Background */
+    }
+    .material-icons-outlined {
+        vertical-align: middle;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    @keyframes fadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; }
+    }
+    .animate-fadeIn {
+        animation: fadeIn 0.3s ease-out forwards;
+    }
+    .animate-fadeOut {
+        animation: fadeOut 0.3s ease-out forwards;
+    }
+    /* Custom Scrollbar for Webkit browsers */
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 8px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: #121212; /* Darker background */
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: #424242; /* Lighter gray */
+        border-radius: 4px;
+        border: 2px solid #121212;
+    }
+     /* Custom Scrollbar for Firefox */
+    .custom-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: #424242 #121212;
+    }
+    /* Styles for Blog Article Content */
+    .prose h2 {
+        font-size: 1.5rem; /* 24px */
+        line-height: 2rem; /* 32px */
+        font-weight: 700;
+        color: white;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    .prose h3 {
+        font-size: 1.25rem; /* 20px */
+        line-height: 1.75rem; /* 28px */
+        font-weight: 700;
+        color: white;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+    .prose p {
+        margin-bottom: 1rem;
+        line-height: 1.625;
+    }
+    .prose ul {
+        list-style-type: disc;
+        list-style-position: inside;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding-left: 1rem;
+    }
+    .prose ul li {
+        margin-bottom: 0.5rem;
+    }
+</style>
+<link rel="stylesheet" href="/index.css">
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "chart.js": "https://aistudiocdn.com/chart.js@^4.5.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-C2lRPC4m.js"></script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
