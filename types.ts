@@ -17,6 +17,8 @@ export interface Category {
   id: string;
   name: string;
   image?: string;
+  // FIX: Add missing 'icon' property to the Category interface.
+  icon: string;
 }
 
 export interface Testimonial {

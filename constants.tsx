@@ -92,20 +92,20 @@ export const APP_CONFIG = {
 };
 
 export const NavLinks = [
-  { id: 'home', name: 'Accueil', href: '#' },
-  { id: 'boutique', name: 'Boutique', href: '#' },
-  { id: 'boissons', name: 'Boissons', href: '#' },
-  { id: 'news', name: 'Actualités', href: '#' },
-  { id: 'blog', name: 'Blog', href: '#' },
-  { id: 'contact', name: 'Contactez-nous', href: '#' },
+  { id: 'home', name: 'Accueil', href: '#', icon: 'home' },
+  { id: 'boutique', name: 'Boutique', href: '#', icon: 'storefront' },
+  { id: 'boissons', name: 'Boissons', href: '#', icon: 'local_bar' },
+  { id: 'news', name: 'Actualités', href: '#', icon: 'newspaper' },
+  { id: 'blog', name: 'Blog', href: '#', icon: 'article' },
+  { id: 'contact', name: 'Contactez-nous', href: '#', icon: 'contact_support' },
 ];
 
 export const CATEGORIES: Category[] = [
-    { id: 'pizza', name: 'Pizza', image: 'https://picsum.photos/id/1080/100/100' },
-    { id: 'pasta', name: 'Pâtes', image: 'https://picsum.photos/id/1078/100/100' },
-    { id: 'burgers', name: 'Burgers', image: 'https://picsum.photos/id/163/100/100' },
-    { id: 'salads', name: 'Salades', image: 'https://picsum.photos/id/103/100/100' },
-    { id: 'drinks', name: 'Boissons', image: 'https://picsum.photos/id/1060/100/100' },
+    { id: 'pizza', name: 'Pizza', image: 'https://picsum.photos/id/1080/100/100', icon: 'local_pizza' },
+    { id: 'pasta', name: 'Pâtes', image: 'https://picsum.photos/id/1078/100/100', icon: 'ramen_dining' },
+    { id: 'burgers', name: 'Burgers', image: 'https://picsum.photos/id/163/100/100', icon: 'lunch_dining' },
+    { id: 'salads', name: 'Salades', image: 'https://picsum.photos/id/103/100/100', icon: 'grass' },
+    { id: 'drinks', name: 'Boissons', image: 'https://picsum.photos/id/1060/100/100', icon: 'local_drink' },
 ];
 
 export const PRODUCTS: Product[] = [

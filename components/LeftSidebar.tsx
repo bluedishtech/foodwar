@@ -18,8 +18,11 @@ export const CategoriesWidget: React.FC<{
             <ul className="p-4 space-y-2">
                 {CATEGORIES.map((category) => (
                     <li key={category.id}>
-                        <a href="#" onClick={(e) => handleCategoryClick(e, category.id)} className={`flex justify-between items-center hover:text-${themeColor}-500`}>
-                            <span>{category.name}</span>
+                        <a href="#" onClick={(e) => handleCategoryClick(e, category.id)} className={`flex justify-between items-center hover:text-${themeColor}-500 group`}>
+                            <span className="flex items-center gap-3">
+                                <span className="material-icons-outlined text-xl text-neutral-400 group-hover:text-inherit transition-colors">{category.icon}</span>
+                                <span>{category.name}</span>
+                            </span>
                             <span>&gt;</span>
                         </a>
                     </li>

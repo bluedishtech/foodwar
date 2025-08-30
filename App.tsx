@@ -344,10 +344,10 @@ const MobileMenu: React.FC<{
             <span className="material-icons-outlined">close</span>
           </button>
           <h2 className="text-2xl font-bold text-white mt-2 mb-6">Menu</h2>
-          <nav><ul className="space-y-4">{NavLinks.map(link => (<li key={link.name}><a href={link.href} className={`text-lg text-neutral-300 hover:text-${themeColor}-500`} onClick={() => handleNavigate(link.id)}>{link.name}</a></li>))}</ul></nav>
+          <nav><ul className="space-y-4">{NavLinks.map(link => (<li key={link.name}><a href={link.href} className={`text-lg text-neutral-300 hover:text-${themeColor}-500 flex items-center gap-3`} onClick={() => handleNavigate(link.id)}><span className="material-icons-outlined text-xl">{link.icon}</span><span>{link.name}</span></a></li>))}</ul></nav>
           <div className="mt-8">
             <h3 className="text-xl font-bold text-white mb-4">Catégories</h3>
-            <ul className="space-y-2">{CATEGORIES.map((category) => (<li key={category.id}><a href="#" className={`flex justify-between items-center text-neutral-300 hover:text-${themeColor}-500`} onClick={() => handleCategoryNavigation(category.id)}><span>{category.name}</span><span>&gt;</span></a></li>))}</ul>
+            <ul className="space-y-2">{CATEGORIES.map((category) => (<li key={category.id}><a href="#" className={`flex justify-between items-center text-neutral-300 hover:text-${themeColor}-500`} onClick={() => handleCategoryNavigation(category.id)}><span className="flex items-center gap-3"><span className="material-icons-outlined text-xl">{category.icon}</span><span>{category.name}</span></span><span>&gt;</span></a></li>))}</ul>
           </div>
         </div>
       </div>

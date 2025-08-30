@@ -87,7 +87,10 @@ const Header: React.FC<{ onMenuClick: () => void; page: string; setPage: (page: 
                                   onClick={(e) => handleNavClick(e, link.id)} 
                                   className={`${page === link.id ? `text-${themeColor}-500 border-b-2 border-${themeColor}-500 pb-1` : `hover:text-${themeColor}-500`}`}
                                 >
-                                    {link.name}
+                                    <span className="flex items-center gap-1.5">
+                                        <span className="material-icons-outlined text-xl">{link.icon}</span>
+                                        <span>{link.name}</span>
+                                    </span>
                                 </a>
                             </li>
                         ))}
