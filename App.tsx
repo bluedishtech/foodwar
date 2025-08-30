@@ -462,10 +462,10 @@ function App() {
             <>
                 {/* Mobile/Tablet Layout: Single column, re-ordered */}
                 <div className="lg:hidden space-y-8">
-                    {FEATURE_FLAGS.homepage.showHeroSection && <Hero />}
+                    {FEATURE_FLAGS.homepage.showHeroSection && <Hero setPage={setPage} />}
                     {FEATURE_FLAGS.homepage.showPlatDuJourWidget && <PlatDuJourWidget setPage={setPage} onSelectProduct={handleProductSelect} />}
                     <CategoriesWidget onCategorySelect={handleCategorySelect} />
-                    <MainContent onSelectProduct={handleProductSelect} showHero={false} />
+                    <MainContent onSelectProduct={handleProductSelect} showHero={false} setPage={setPage} />
                     <LeftSidebar 
                         onCategorySelect={handleCategorySelect} 
                         setPage={setPage} 
@@ -482,7 +482,7 @@ function App() {
                         <LeftSidebar onCategorySelect={handleCategorySelect} setPage={setPage} onSelectProduct={handleProductSelect} />
                     </aside>
                     <div className="w-full lg:w-1/2">
-                        <MainContent onSelectProduct={handleProductSelect} />
+                        <MainContent onSelectProduct={handleProductSelect} setPage={setPage} />
                     </div>
                     <aside className="w-full lg:w-1/4 lg:sticky lg:top-28 h-fit max-h-[calc(100vh-8rem)] overflow-y-auto custom-scrollbar">
                         <RightSidebar onSelectNews={handleNewsSelect} />

@@ -6,8 +6,12 @@ import { FEATURE_FLAGS } from '../featureFlags';
 import { useAppearance } from '../App';
 
 
-export const Hero: React.FC = () => {
+export const Hero: React.FC<{ setPage: (page: string) => void; }> = ({ setPage }) => {
     const { themeColor } = useAppearance();
+    const handleCtaClick = (e: React.MouseEvent) => {
+        e.preventDefault();
+        setPage('boutique');
+    };
     return (
     <div className="relative bg-neutral-800 rounded-lg overflow-hidden flex items-center min-h-[400px] shadow-lg">
         <div className="absolute inset-0">
@@ -22,8 +26,8 @@ export const Hero: React.FC = () => {
                 </div>
              </div>
              <p className="mt-4 mb-6">Livraisons à domicile sûres et ponctuelles</p>
-             <a href="#" className={`bg-${themeColor}-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-${themeColor}-700 shadow-md`}>
-                Voir les offres
+             <a href="#" onClick={handleCtaClick} className={`bg-${themeColor}-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-${themeColor}-700 shadow-md`}>
+                Voir nos plats
              </a>
         </div>
     </div>
@@ -147,10 +151,10 @@ const ProductListCarousel: React.FC = () => {
 };
 
 
-const MainContent: React.FC<{ onSelectProduct: (id: number) => void; showHero?: boolean; }> = ({ onSelectProduct, showHero = true }) => {
+const MainContent: React.FC<{ onSelectProduct: (id: number) => void; showHero?: boolean; setPage: (page: string) => void; }> = ({ onSelectProduct, showHero = true, setPage }) => {
     return (
         <div className="space-y-8">
-            {showHero && FEATURE_FLAGS.homepage.showHeroSection && <Hero />}
+            {showHero && FEATURE_FLAGS.homepage.showHeroSection && <Hero setPage={setPage} />}
             {FEATURE_FLAGS.homepage.showFeaturedProducts && <ProductGrid title="Goûtez ce que vous aimez" products={PRODUCTS} showTabs={true} onSelectProduct={onSelectProduct} />}
             {FEATURE_FLAGS.homepage.showCategoryCarousel && <CategorySlider />}
             {FEATURE_FLAGS.homepage.showProductCarousel && <ProductGrid title="Carrousel des produits" products={PRODUCTS.slice(4)} onSelectProduct={onSelectProduct} />}
